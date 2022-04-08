@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AdminLoansController">
+    <center>
+        <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <children>
+                <BorderPane layoutX="0.0" layoutY="-3.0" prefHeight="700.0" prefWidth="900.0">
+                    <center>
+                        <ScrollPane prefHeight="535.0" prefWidth="900.0">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="699.0" prefWidth="899.0" style="-fx-background-color: grey;">
+                                    <ChoiceBox fx:id="filiaBox" layoutX="81.0" layoutY="50.0" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: C3942F;">
+                                        <items>
+                                            <FXCollections fx:factory="observableArrayList">
+                                                <String fx:value="Rzeszów" />
+                                                <String fx:value="Kraków" />
+                                                <String fx:value="Warszawa" />
+                                                <String fx:value="Gdańsk" />
+                                                <String fx:value="Katowice" />
+                                                <String fx:value="Wszystkie" />
+
+                                            </FXCollections>
+                                        </items>
+                                    </ChoiceBox>
+                                    <Label layoutX="145.0" layoutY="25.0" text="FILIA" textFill="WHITE">
+                                        <font>
+                                            <Font name="Segoe UI Black" size="12.0" />
+                                        </font></Label>
+                                    <Label layoutX="322.0" layoutY="67.0" prefHeight="18.0" prefWidth="83.0" text="NAZWISKO" textFill="WHITE">
+                                        <font>
+                                            <Font name="Segoe UI Black" size="12.0" />
+                                        </font></Label>
+                                    <Label layoutX="322.0" layoutY="119.0" text="NUMER WYPOŻYCZENIA" textFill="WHITE">
+                                        <font>
+                                            <Font name="Segoe UI Black" size="12.0" />
+                                        </font></Label>
+                                    <TableView fx:id="table_wypozyczenia" layoutX="66.0" layoutY="176.0" prefHeight="487.0" prefWidth="753.0" style="-fx-background-color: #716F67; -fx-border-color: grey;">
+                                        <columns>
+                                            <TableColumn fx:id="numerColumn" prefWidth="45.79998779296875" text="Numer" />
+                                            <TableColumn fx:id="imieColumn" minWidth="7.20001220703125" prefWidth="82.59996795654297" text="Imię" />
+                                            <TableColumn fx:id="nazwiskoColumn" prefWidth="81.59994506835938" text="Nazwisko" />
+                                            <TableColumn fx:id="dataColumn" prefWidth="112.79998779296875" text="Data wypożyczenia" />
+                                            <TableColumn fx:id="data2Column" prefWidth="82.4000244140625" text="Data zwrotu" />
+                                            <TableColumn fx:id="filiaColumn" prefWidth="87.00003051757812" text="Filia" />
+                                            <TableColumn fx:id="pojazdColumn" prefWidth="103.39996337890625" text="Pojazd" />
+                                            <TableColumn fx:id="statusColumn" prefWidth="90.20001220703125" text="Status" />
+                                            <TableColumn fx:id="cenaColumn" prefWidth="68.79995117187502" text="Cena" />
+                                        </columns>
+                                    </TableView>
+                                    <TextField fx:id="numerField" layoutX="481.0" layoutY="115.0" />
+                                    <TextField fx:id="surnameField" layoutX="481.0" layoutY="63.0" />
+                                    <Label layoutX="137.0" layoutY="88.0" text="STATUS" textFill="WHITE">
+                                        <font>
+                                            <Font name="Segoe UI Black" size="12.0" />
+                                        </font></Label>
+                                    <ChoiceBox fx:id="statusBox" layoutX="81.0" layoutY="117.0" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: C3942F;">
+                                        <items>
+                                            <FXCollections fx:factory="observableArrayList">
+                                                <String fx:value="Rezerwacja" />
+                                                <String fx:value="Zwrócony" />
+                                                <String fx:value="Wypożyczony" />
+                                                <String fx:value="Anulowany" />
+                                                <String fx:value="Wszystko" />
+                                            </FXCollections>
+                                        </items>
+                                    </ChoiceBox>
+                                    <Label layoutX="429.0" layoutY="28.0" text="WYSZUKIWARKA" textFill="WHITE">
+                                        <font>
+                                            <Font name="Segoe UI Black" size="12.0" />
+                                        </font></Label>
+                                </AnchorPane>
+                            </content>
+                        </ScrollPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </center>
+    <left>
+        <AnchorPane prefHeight="700.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="700.0" fitWidth="302.0">
+                    <image>
+                        <Image url="@../../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+                    </image>
+                </ImageView>
+                <Button layoutX="12.0" layoutY="334.0" mnemonicParsing="false" onAction="#AdminKatalogPojazdowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Katalog pojazdów" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="17.0" fx:id="x1" />
+                    </font>
+                </Button>
+                <Line endX="135.0" layoutX="146.0" layoutY="296.0" startX="-129.00001525878906" stroke="#af9f36" strokeWidth="3.0" />
+                <Button font="$x1" layoutX="12.0" layoutY="395.0" mnemonicParsing="false" onAction="#AdminRaportyButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Raporty" textFill="WHITE" />
+                <Button font="$x1" layoutX="12.0" layoutY="457.0" mnemonicParsing="false" onAction="#AdminWypozyczeniaKlientowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: A4CF2E;" text="Wypożyczenia klientów" textFill="WHITE" />
+                <Button font="$x1" layoutX="11.0" layoutY="518.0" mnemonicParsing="false" onAction="#AdminUzytkownicyButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Użytkownicy i filie" textFill="WHITE" />
+                <Button font="$x1" layoutX="11.0" layoutY="580.0" mnemonicParsing="false" onAction="#AdminUstawieniaButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Ustawienia" textFill="WHITE" />
+                <Label layoutX="78.0" layoutY="252.0" text="Administrator" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Historic" size="24.0" />
+                    </font>
+                </Label>
+                <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#AdminLogoutButton" style="-fx-background-color: red;" text="Wyloguj" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="74.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/завантаження.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+</BorderPane>

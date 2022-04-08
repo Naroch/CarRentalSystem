@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientController">
+    <center>
+        <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <children>
+                <BorderPane layoutX="0.0" layoutY="-3.0" prefHeight="700.0" prefWidth="900.0">
+                    <center>
+                        <ScrollPane prefHeight="535.0" prefWidth="900.0">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="699.0" prefWidth="899.0">
+                                    <children>
+                                        <ChoiceBox fx:id="filia" blendMode="DARKEN" layoutX="71.0" layoutY="104.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: C3942F;">
+                                            <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                    <String fx:value="Rzeszow" />
+                                                    <String fx:value="Krakow" />
+                                                    <String fx:value="Warszawa" />
+                                                </FXCollections>
+                                            </items>
+                                        </ChoiceBox>
+                                        <ChoiceBox fx:id="marka" blendMode="DARKEN" layoutX="226.0" layoutY="104.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: C3942F;">
+                                            <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                    <String fx:value="VW" />
+                                                    <String fx:value="BMW" />
+                                                    <String fx:value="TOYOTA" />
+                                                    <String fx:value="AUDI" />
+                                                    <String fx:value="KIA" />
+                                                    <String fx:value="RENAULT" />
+                                                </FXCollections>
+                                            </items>
+                                        </ChoiceBox>
+                                        <ChoiceBox fx:id="silnik" blendMode="DARKEN" layoutX="379.0" layoutY="104.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: C3942F;">
+                                            <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                    <String fx:value="BENZYNA" />
+                                                    <String fx:value="DIESEL" />
+                                                    <String fx:value="ELEKTRYCZNY" />
+                                                    <String fx:value="HYBRYDA" />
+                                                </FXCollections>
+                                            </items>
+                                        </ChoiceBox>
+                                        <ChoiceBox fx:id="cena" blendMode="DARKEN" layoutX="535.0" layoutY="105.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: C3942F;">
+                                            <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                    <String fx:value="0-100" />
+                                                    <String fx:value="101-200" />
+                                                    <String fx:value="201-350" />
+                                                    <String fx:value="350+" />
+                                                </FXCollections>
+                                            </items>
+                                        </ChoiceBox>
+                                        <Label layoutX="71.0" layoutY="84.0" text="FILIA" />
+                                        <Label layoutX="226.0" layoutY="84.0" text="MARKA" />
+                                        <Label layoutX="379.0" layoutY="84.0" text="SILNIK" />
+                                        <Label layoutX="535.0" layoutY="85.0" text="CENA" />
+                                        <Pane layoutX="61.0" layoutY="411.0" prefHeight="200.0" prefWidth="200.0" />
+                                        <Pane layoutX="327.0" layoutY="411.0" prefHeight="200.0" prefWidth="200.0" />
+                                        <ChoiceBox fx:id="status" blendMode="DARKEN" layoutX="692.0" layoutY="105.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: C3942F;">
+                                            <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                    <String fx:value="dostępny" />
+                                                    <String fx:value="niedostepny" />
+                                                    <String fx:value="ZAREZERWOWANY" />
+                                                    <String fx:value="WYPOŻYCZONY" />
+                                                </FXCollections>
+                                            </items>
+                                        </ChoiceBox>
+                                        <Label layoutX="692.0" layoutY="85.0" text="STATUS" />
+                                        <Button layoutX="71.0" layoutY="30.0" mnemonicParsing="false" onAction="#ClientDodajSamochodButton" prefHeight="32.0" prefWidth="150.0" style="-fx-background-color: red;" text="Dodaj samochód" textFill="WHITE">
+                                            <font>
+                                                <Font name="Segoe UI Black" size="14.0" fx:id="x2" />
+                                            </font>
+                                        </Button>
+                                        <TableView fx:id="cars_table" layoutX="67.0" layoutY="170.0" prefHeight="481.0" prefWidth="549.0">
+                                            <columns>
+                                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="178.0" text="Model" fx:id="model_table" />
+                                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Silnik" fx:id="silnik_table" />
+                                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="94.0" text="Cena" fx:id="cena_table" />
+                                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="174.0" text="Status" fx:id="status_table" />
+                                            </columns>
+                                        </TableView>
+                                        <ImageView fx:id="image_view" fitHeight="181.0" fitWidth="241.33332412719727" layoutX="630.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </ScrollPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </center>
+    <left>
+        <AnchorPane prefHeight="700.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="700.0" fitWidth="302.0">
+                    <image>
+                        <Image url="@../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+                    </image>
+                </ImageView>
+                <Button layoutX="12.0" layoutY="334.0" mnemonicParsing="false" onAction="#ClientKatalogPojazdowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: A4CF2E;" text="Katalog pojazdów" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="17.0" />
+                    </font>
+                </Button>
+                <Line endX="135.0" layoutX="146.0" layoutY="296.0" startX="-129.00001525878906" stroke="#af9f36" strokeWidth="3.0" />
+
+                <Button layoutX="10.0" layoutY="404.0" mnemonicParsing="false" onAction="#ClientWypozyczeniaKlientowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Moje wypożyczenia " textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="17.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="470.0" mnemonicParsing="false" onAction="#ClientUstawieniaButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Ustawienia" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="17.0" />
+                    </font>
+                </Button>
+                <Label layoutX="125.0" layoutY="44.0" text="Client" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClientLogoutButton" style="-fx-background-color: red;" text="Wyloguj" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="79.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/unnamed.jpg" />
+                    </image>
+                </ImageView>
+                <Label fx:id="name" layoutX="88.0" layoutY="239.0" prefHeight="18.0" prefWidth="72.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lastName" layoutX="163.0" layoutY="241.0" prefHeight="17.0" prefWidth="85.0" textFill="WHITE" wrapText="true" />
+            </children>
+        </AnchorPane>
+    </left>
+</BorderPane>

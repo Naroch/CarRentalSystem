@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AdminSettingsController">
+   <left>
+      <AnchorPane prefHeight="700.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="302.0">
+               <image>
+                  <Image url="@../../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="12.0" layoutY="334.0" mnemonicParsing="false" onAction="#AdminKatalogPojazdowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Katalog pojazdów" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Line endX="135.0" layoutX="146.0" layoutY="296.0" startX="-129.00001525878906" stroke="#af9f36" strokeWidth="3.0" />
+            <Button layoutX="12.0" layoutY="395.0" mnemonicParsing="false" onAction="#AdminRaportyButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Raporty" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="457.0" mnemonicParsing="false" onAction="#AdminWypozyczeniaKlientowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Wypożyczenia klientów" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="518.0" mnemonicParsing="false" onAction="#AdminUzytkownicyButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Użytkownicy i filie" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="580.0" mnemonicParsing="false" onAction="#AdminUstawieniaButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: A4CF2E;" text="Ustawienia" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="78.0" layoutY="252.0" text="Administrator" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Historic" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#AdminLogoutButton" style="-fx-background-color: red;" text="Wyloguj" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="74.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/завантаження.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="imieTextField" layoutX="328.0" layoutY="280.0" prefHeight="25.0" prefWidth="242.0" promptText="Imie" />
+            <TextField fx:id="nazwiskoTextField" layoutX="328.0" layoutY="310.0" prefHeight="25.0" prefWidth="242.0" promptText="Nazwisko" />
+            <TextField fx:id="telefonTextField" layoutX="328.0" layoutY="340.0" prefHeight="25.0" prefWidth="242.0" promptText="Telefon" />
+            <TextField fx:id="emialTextField" layoutX="328.0" layoutY="250.0" prefHeight="25.0" prefWidth="242.0" promptText="Adres email" />
+            <Button layoutX="520.0" layoutY="379.0" mnemonicParsing="false" onAction="#saveDataButton" style="-fx-background-color: #35EC1E;" text="Zapisz" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font></Button>
+            <TextField fx:id="loginTextField" editable="false" layoutX="328.0" layoutY="190.0" prefHeight="25.0" prefWidth="242.0" promptText="Login" />
+            <Button layoutX="576.0" layoutY="190.0" mnemonicParsing="false" onAction="#updateLoginButton" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: orange;" text="Zmień" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font></Button>
+            <Button layoutX="576.0" layoutY="220.0" mnemonicParsing="false" onAction="#updateHasloButton" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: orange;" text="Zmień" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font></Button>
+            <PasswordField fx:id="hasloField" editable="false" layoutX="328.0" layoutY="220.0" prefHeight="25.0" prefWidth="241.0" promptText="Hasło" />
+         </children></AnchorPane>
+   </right>
+</BorderPane>

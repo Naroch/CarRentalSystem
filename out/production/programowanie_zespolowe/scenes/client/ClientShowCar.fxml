@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.client.ClientShowCarController">
+  <center>
+    <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+      <children>
+        <BorderPane layoutX="0.0" layoutY="-3.0" prefHeight="700.0" prefWidth="900.0" visible="true">
+          <right>
+            <ScrollPane prefHeight="535.0" prefWidth="900.0">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="699.0" prefWidth="899.0" style="-fx-background-color: grey;">
+                  <children>
+                    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClientCofnijButton" style="-fx-background-color: red;" text="Cofnij" textFill="WHITE">
+                      <font>
+                        <Font name="Segoe UI Black" size="14.0" fx:id="x2" />
+                      </font>
+                    </Button>
+                    <ImageView id="1_title_2020_kia_optima.jpg" fx:id="car" fitHeight="150.0" fitWidth="179.0" layoutX="582.0" layoutY="82.0" />
+                    <Button layoutX="693.0" layoutY="628.0" mnemonicParsing="false" onAction="#ZarezerwujAuto" prefHeight="35.0" prefWidth="181.0" style="-fx-background-color: C3942F;" text="ZAREZERWUJ" textFill="WHITE">
+                      <font>
+                        <Font name="Segoe UI Black" size="17.0" fx:id="x1" />
+                      </font>
+                    </Button>
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="550.0" layoutY="433.0" prefHeight="38.0" prefWidth="96.0" style="-fx-background-color: A4CF2E;" text="STATUS:" textAlignment="CENTER" />
+                    <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" layoutX="646.0" layoutY="433.0" prefHeight="37.0" prefWidth="146.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                    <DatePicker fx:id="data_od" layoutX="585.0" layoutY="487.0" />
+                    <DatePicker fx:id="data_do" layoutX="585.0" layoutY="539.0" />
+                    <ImageView fx:id="imageView" fitHeight="283.0" fitWidth="412.0" layoutX="461.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" />
+                    <Pane layoutX="47.0" layoutY="70.0" prefHeight="594.0" prefWidth="413.0">
+                      <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="1.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="MARKA:" textAlignment="CENTER" />
+                        <Label id="Marka" fx:id="marka" alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="33.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="65.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="DATA PRODUKCJI:" textAlignment="CENTER" />
+                        <Label fx:id="data" alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="97.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="129.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="SILNIK:" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="189.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="MOC:" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-13.0" layoutY="253.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="PALIWO:" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="317.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="SKRZYNIA BIEGÓW:" textAlignment="CENTER" />
+                        <Label fx:id="paliwo" alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="285.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                        <Label fx:id="moc" alignment="CENTER" contentDisplay="CENTER" layoutX="-13.0" layoutY="221.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                        <Label fx:id="silnik" alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="161.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                        <Label fx:id="skrzynia" alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="349.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="381.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="KOLOR:" textAlignment="CENTER" />
+                        <Label fx:id="kolor" alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="413.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="445.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="KOSZT:" textAlignment="CENTER" />
+                        <Label fx:id="koszt" alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="477.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="508.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="NR REJESTRACYJNY:" textAlignment="CENTER" />
+                        <Label fx:id="nr_reje" alignment="CENTER" contentDisplay="CENTER" layoutX="-14.0" layoutY="540.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                      </children>
+                    </Pane>
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="460.0" layoutY="71.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="AKTUALNIE W FILII:" textAlignment="CENTER" />
+                    <Label fx:id="filia" alignment="CENTER" contentDisplay="CENTER" layoutX="460.0" layoutY="103.0" prefHeight="32.0" prefWidth="413.0" style="-fx-background-color: C3942F;" text="" textAlignment="CENTER" />
+                    <Button layoutX="501.0" layoutY="628.0" mnemonicParsing="false" onAction="#ClientDamagesButton" prefHeight="35.0" prefWidth="181.0" style="-fx-background-color: red;" text="Uszkodzenia" textFill="WHITE">
+                      <font>
+                        <Font name="Segoe UI Black" size="17.0" fx:id="x11" />
+                      </font>
+                    </Button>
+                  </children>
+                </AnchorPane>
+              </content>
+            </ScrollPane>
+          </right>
+        </BorderPane>
+      </children>
+    </AnchorPane>
+  </center>
+  <left>
+    <AnchorPane prefHeight="700.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+      <children>
+        <ImageView fitHeight="700.0" fitWidth="302.0">
+          <image>
+            <Image url="@../../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+          </image>
+        </ImageView>
+        <Button font="$x1" layoutX="12.0" layoutY="334.0" mnemonicParsing="false" onAction="#ClientKatalogPojazdowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: A4CF2E;" text="Katalog pojazdów" textFill="WHITE" />
+        <Line endX="135.0" layoutX="146.0" layoutY="296.0" startX="-129.00001525878906" stroke="#af9f36" strokeWidth="3.0" />
+        <Button font="$x1" layoutX="10.0" layoutY="404.0" mnemonicParsing="false" onAction="#ClientWypozyczeniaKlientowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Moje wypożyczenia " textFill="WHITE" />
+        <Button font="$x1" layoutX="10.0" layoutY="470.0" mnemonicParsing="false" onAction="#ClientUstawieniaButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Ustawienia" textFill="WHITE" />
+        <Button font="$x2" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClientLogoutButton" style="-fx-background-color: red;" text="Wyloguj" textFill="WHITE" />
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="79.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../images/unnamed.jpg" />
+          </image>
+        </ImageView>
+        <Label fx:id="name" layoutX="64.0" layoutY="253.0" text="name" textFill="WHITE">
+          <font>
+            <Font name="Segoe UI Black" size="12.0" />
+          </font></Label>
+        <Label fx:id="lastName" layoutX="158.0" layoutY="253.0" text="lastName" textFill="WHITE">
+          <font>
+            <Font name="Segoe UI Black" size="12.0" />
+          </font></Label>
+      </children>
+    </AnchorPane>
+  </left>
+</BorderPane>

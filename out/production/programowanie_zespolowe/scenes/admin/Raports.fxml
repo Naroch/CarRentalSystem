@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AdminReportController">
+   <left>
+      <AnchorPane prefHeight="700.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="302.0">
+               <image>
+                  <Image url="@../../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="12.0" layoutY="334.0" mnemonicParsing="false" onAction="#AdminCarCatalogueButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Katalog pojazdów" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Line endX="135.0" layoutX="146.0" layoutY="296.0" startX="-129.00001525878906" stroke="#af9f36" strokeWidth="3.0" />
+            <Button layoutX="12.0" layoutY="395.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: A4CF2E;" text="Raporty" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="457.0" mnemonicParsing="false" onAction="#AdminLoansButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Wypożyczenia klientów" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="518.0" mnemonicParsing="false" onAction="#AdminFiliasButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Użytkownicy i filie" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="580.0" mnemonicParsing="false" onAction="#AdminSettingsButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Ustawienia" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="78.0" layoutY="252.0" text="Administrator" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Historic" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#AdminLogoutButton" style="-fx-background-color: red;" text="Wyloguj" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="74.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/завантаження.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="450.0" layoutY="100.0" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="700.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/raporty.jpg" />
+                     </image></ImageView>
+                  <Button layoutX="683.0" layoutY="92.0" mnemonicParsing="false" onAction="#report_button" style="-fx-background-color: #E1B74C;" text="Wyświetl" />
+                  <Button layoutX="-1.0" layoutY="595.0" mnemonicParsing="false" onAction="#Generate_report" prefHeight="106.0" prefWidth="900.0" style="-fx-background-color: A4CF2E;" text="Generuj">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="table_view" layoutX="110.0" layoutY="187.0" prefHeight="200.0" prefWidth="680.0">
+                     <columns>
+                        <TableColumn fx:id="user_name" prefWidth="107.0" text="Imie" />
+                        <TableColumn fx:id="surname" text="Nazwisko" />
+                        <TableColumn fx:id="model" prefWidth="138.0" text="model" />
+                        <TableColumn fx:id="date_of_loan" prefWidth="134.0" text="data wypozyczenia" />
+                        <TableColumn fx:id="date_of_expiry" minWidth="5.0" prefWidth="140.0" text="Data oodania" />
+                        <TableColumn fx:id="price" text="Cena" />
+                     </columns>
+                  </TableView>
+                  <DatePicker fx:id="date_from" layoutX="143.0" layoutY="92.0" />
+                  <DatePicker fx:id="date_to" layoutX="425.0" layoutY="92.0" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+   </right>
+</BorderPane>

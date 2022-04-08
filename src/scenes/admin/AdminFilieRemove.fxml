@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="220.0" prefWidth="244.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AdminFilieRemoveController">
+   <children>
+      <Label layoutX="7.0" layoutY="27.0" text="Wybierz do której fili chcesz przepisać dane" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Label>
+      <ComboBox fx:id="filiaComboBox" layoutX="49.0" layoutY="85.0" prefWidth="150.0" promptText="Filia" style="-fx-background-color: orange;" />
+      <Button fx:id="updateButton" layoutX="88.0" layoutY="164.0" mnemonicParsing="false" onAction="#updateButton" style="-fx-background-color: #35EC1E;" text="Zatwierdź" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.login.LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #97A1A3;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="112.0" layoutY="357.0" text="Car Rental System" textFill="#f1f879">
+               <font>
+                  <Font name="Segoe Print Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="411.0" text="we find the right car for you" textFill="WHITE">
+               <font>
+                  <Font name="Showcard Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="172.19998168945312" endY="-3.0517578125E-5" layoutX="194.0" layoutY="400.0" startX="-111.0000228881836" startY="-3.0517578125E-5" stroke="#cce830" strokeWidth="2.0" />
+            <Label layoutX="14.0" layoutY="470.0" text="©URZ Institute of Computer Science" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="344.0" fitWidth="558.0" layoutX="-118.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Black-car-on-transparent-background-PNG.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="login_username" cache="true" layoutX="17.0" layoutY="186.0" prefHeight="26.0" prefWidth="222.0" />
+            <PasswordField fx:id="login_password" layoutX="16.0" layoutY="269.0" prefHeight="26.0" prefWidth="226.0" />
+            <Button fx:id="loginButton" layoutX="16.0" layoutY="335.0" mnemonicParsing="false" onAction="#LoginButton" prefHeight="31.0" prefWidth="228.0" style="-fx-background-color: #2ECC71;" text="Zaloguj" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="16.0" layoutY="374.0" mnemonicParsing="false" onAction="#RejestracjaButton" prefHeight="32.0" prefWidth="227.0" style="-fx-background-color: orange;" text="Rejestracja" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="14.0" layoutY="414.0" mnemonicParsing="false" onAction="#CancelButton" prefHeight="31.0" prefWidth="228.0" style="-fx-background-color: #DC7633;" text="Wyjście" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="161.0" text="Login">
+               <font>
+                  <Font name="Segoe UI Semilight" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="241.0" text="Hasło">
+               <font>
+                  <Font name="Segoe UI Semilight" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="95.0" fitWidth="122.0" layoutX="67.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/login1.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </right>
+</BorderPane>

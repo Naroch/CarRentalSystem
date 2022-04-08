@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.client.ClientLoansController">
+    <left>
+        <AnchorPane prefHeight="700.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="700.0" fitWidth="302.0">
+                    <image>
+                        <Image url="@../../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+                    </image>
+                </ImageView>
+                <Button layoutX="12.0" layoutY="334.0" mnemonicParsing="false" onAction="#ClientCatalogButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Katalog pojazdów" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="17.0" />
+                    </font>
+                </Button>
+                <Line endX="135.0" layoutX="146.0" layoutY="296.0" startX="-129.00001525878906" stroke="#af9f36" strokeWidth="3.0" />
+
+                <Button layoutX="10.0" layoutY="404.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: A4CF2E;" text="Moje wypożyczenia " textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="17.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="470.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Ustawienia" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="17.0" />
+                    </font>
+                </Button>
+                <Button fx:id="ClientLogoutButton" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClientLogoutButton" style="-fx-background-color: red;" text="Wyloguj" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="79.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/unnamed.jpg" />
+                    </image>
+                </ImageView>
+                <Label fx:id="name" layoutX="65.0" layoutY="259.0" text="name" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font></Label>
+                <Label fx:id="lastName" layoutX="161.0" layoutY="259.0" text="lastName" textFill="#fcf8f8">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font></Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <children>
+                <BorderPane layoutX="0.0" layoutY="-3.0" prefHeight="700.0" prefWidth="900.0">
+                    <center>
+                        <ScrollPane prefHeight="535.0" prefWidth="900.0">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="699.0" prefWidth="899.0" style="-fx-background-color: grey;">
+                                    <ChoiceBox fx:id="filia" blendMode="DARKEN" layoutX="79.0" layoutY="125.0" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: yellow;">
+                                        <items>
+                                            <FXCollections fx:factory="observableArrayList">
+                                                <String fx:value="Rzeszow" />
+                                                <String fx:value="Krakow" />
+                                                <String fx:value="Warszawa" />
+                                            </FXCollections>
+                                        </items>
+                                    </ChoiceBox>
+                                    <Label layoutX="143.0" layoutY="100.0" text="FILIA" />
+                                    <TableView fx:id="table_wypozyczenia" layoutX="66.0" layoutY="176.0" prefHeight="487.0" prefWidth="753.0">
+                                        <columns>
+                                            <TableColumn fx:id="numerColumn" prefWidth="45.79998779296875" text="Numer" />
+                                            <TableColumn fx:id="imienazwiskoColumn" minWidth="7.20001220703125" prefWidth="124.80004119873047" text="Imię i Nazwisko" />
+                                            <TableColumn fx:id="peselColumn" prefWidth="66.60003662109375" text="Pesel" />
+                                            <TableColumn fx:id="dataColumn" prefWidth="120.79998779296875" text="Data wypożyczenia" />
+                                            <TableColumn fx:id="filiaColumn" prefWidth="82.60006713867188" text="Filia" />
+                                            <TableColumn fx:id="pojazdColumn" prefWidth="166.79998779296875" text="Pojazd" />
+                                            <TableColumn fx:id="statusColumn" prefWidth="144.39996337890625" text="Status" />
+                                            <TableColumn fx:id="buttonColumn" minWidth="0.0" prefWidth="0.0" />
+                                        </columns>
+                                    </TableView>
+                                    <Label layoutX="305.0" layoutY="22.0" text="Moje wypożyczenia" textFill="WHITE">
+                                        <font>
+                                            <Font name="Segoe UI Black" size="32.0" />
+                                        </font>
+                                    </Label>
+                                    <Button layoutX="675.0" layoutY="122.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="130.0" style="-fx-background-color: red;" text="Anuluj rezerwacje" textFill="WHITE">
+                              <font>
+                                 <Font name="Segoe UI Black" size="12.0" />
+                              </font></Button>
+                                </AnchorPane>
+                            </content>
+                        </ScrollPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

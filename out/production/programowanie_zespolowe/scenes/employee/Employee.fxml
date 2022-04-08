@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.employee.EmployeeController">
+  <center>
+    <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+      <children>
+        <BorderPane layoutX="0.0" layoutY="-3.0" prefHeight="700.0" prefWidth="900.0">
+          <center>
+            <ScrollPane prefHeight="535.0" prefWidth="900.0">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="699.0" prefWidth="899.0" style="-fx-background-color: grey;">
+                  <children>
+                    <Button layoutX="45.0" layoutY="29.0" mnemonicParsing="false" onAction="#EmployeeDodajSamochodButton" prefHeight="32.0" prefWidth="150.0" style="-fx-background-color: red;" text="Dodaj samochód" textFill="WHITE">
+                      <font>
+                        <Font name="Segoe UI Black" size="14.0" fx:id="x2" />
+                      </font>
+                    </Button>
+                    <TableView fx:id="cars_table" layoutX="74.0" layoutY="142.0" prefHeight="510.0" prefWidth="752.0">
+                      <columns>
+                        <TableColumn fx:id="model_table" maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Model" />
+                        <TableColumn fx:id="silnik_table" maxWidth="5000.0" minWidth="10.0" prefWidth="123.0" text="Silnik" />
+                        <TableColumn fx:id="cena_table" maxWidth="5000.0" minWidth="10.0" prefWidth="112.0" text="Cena [zł/doba]" />
+                        <TableColumn fx:id="status_table" maxWidth="5000.0" minWidth="10.0" prefWidth="90.0" text="Status" />
+                        <TableColumn fx:id="paliwo_table" maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Paliwo" />
+                        <TableColumn fx:id="skrzynia_table" maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Skrzynia" />
+                        <TableColumn fx:id="moc_table" maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Moc [KM]" />
+                      </columns>
+                    </TableView>
+                    <ChoiceBox id="status" fx:id="statusChoice" blendMode="DARKEN" layoutX="389.0" layoutY="66.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: C3942F;">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Dostępny" />
+                          <String fx:value="Niedostępny" />
+                          <String fx:value="Zarezerwowany" />
+                          <String fx:value="Wypożyczony" />
+                          <String fx:value="Wszystkie" />
+                        </FXCollections>
+                      </items>
+                    </ChoiceBox>
+                    <Label layoutX="411.0" layoutY="47.0" text="STATUS" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="12.0" />
+                                 </font></Label>
+                    <TextField fx:id="modelTextField" layoutX="143.0" layoutY="72.0" prefWidth="200.0" />
+                    <Label layoutX="77.0" layoutY="75.0" text="MODEL:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="12.0" />
+                                 </font></Label>
+                    <Label layoutX="539.0" layoutY="47.0" text="SKRZYNIA" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="12.0" />
+                                 </font></Label>
+                    <ChoiceBox id="status" fx:id="skrzyniaChoice" blendMode="DARKEN" layoutX="526.0" layoutY="67.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: C3942F;">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Manualna" />
+                          <String fx:value="Automatyczna" />
+                          <String fx:value="Wszystkie" />
+                        </FXCollections>
+                      </items>
+                    </ChoiceBox>
+                    <ChoiceBox id="status" fx:id="paliwoChoice" blendMode="DARKEN" layoutX="664.0" layoutY="67.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: C3942F;">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Benzyna" />
+                          <String fx:value="Diesel" />
+                          <String fx:value="Elektryczny" />
+                          <String fx:value="Wszystkie" />
+                        </FXCollections>
+                      </items>
+                    </ChoiceBox>
+                    <Label layoutX="678.0" layoutY="47.0" text="PALIWO" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="12.0" />
+                                 </font></Label>
+                  </children>
+                </AnchorPane>
+              </content>
+            </ScrollPane>
+          </center>
+        </BorderPane>
+      </children>
+    </AnchorPane>
+  </center>
+  <left>
+    <AnchorPane prefHeight="700.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+      <children>
+        <ImageView fitHeight="700.0" fitWidth="302.0">
+          <image>
+            <Image url="@../../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+          </image>
+        </ImageView>
+        <Button layoutX="12.0" layoutY="334.0" mnemonicParsing="false" onAction="#EmloyeeKatalogPojazdowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: A4CF2E;" text="Katalog pojazdów" textFill="WHITE">
+          <font>
+            <Font name="Segoe UI Black" size="17.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Line endX="135.0" layoutX="146.0" layoutY="296.0" startX="-129.00001525878906" stroke="#af9f36" strokeWidth="3.0" />
+        <Button font="$x1" layoutX="12.0" layoutY="395.0" mnemonicParsing="false" onAction="#EmloyeeRaportyButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Raporty" textFill="WHITE" />
+        <Button font="$x1" layoutX="12.0" layoutY="457.0" mnemonicParsing="false" onAction="#EmloyeeWypozyczeniaKlientowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Wypożyczenia klientów" textFill="WHITE" />
+        <Button font="$x1" layoutX="13.0" layoutY="585.0" mnemonicParsing="false" onAction="#EmloyeeUstawieniaButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Ustawienia" textFill="WHITE" />
+        <Button font="$x2" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#EmployeeLogoutButton" style="-fx-background-color: red;" text="Wyloguj" textFill="WHITE" />
+        <ImageView fitHeight="173.0" fitWidth="179.0" layoutX="62.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../images/kissclipart-customer-service-manager-icon-clipart-customer-ser-0fd8b371b6a15740.png" />
+          </image>
+        </ImageView>
+        <Label fx:id="name" alignment="CENTER" layoutX="16.0" layoutY="250.0" prefHeight="35.0" prefWidth="134.0" textFill="WHITE">
+          <font>
+            <Font name="Segoe UI Historic" size="24.0" />
+          </font>
+        </Label>
+        <Label fx:id="lastName" alignment="CENTER" layoutX="155.0" layoutY="250.0" prefHeight="35.0" prefWidth="134.0" textFill="WHITE">
+          <font>
+            <Font name="Segoe UI Historic" size="24.0" />
+          </font>
+        </Label>
+        <Button font="$x1" layoutX="11.0" layoutY="522.0" mnemonicParsing="false" onAction="#EmployeeUzytkownicyButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Użytkownicy" textFill="WHITE" />
+      </children>
+    </AnchorPane>
+  </left>
+</BorderPane>

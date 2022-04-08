@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AdminLoansDetailsController">
+   <left>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="556.0" fitWidth="431.0" layoutY="-2.0">
+               <image>
+                  <Image url="@../../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="5.0" layoutY="14.0" prefHeight="22.0" prefWidth="389.0" text="Szczegóły wypożyczenia" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Segoe UI Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="55.0" text="Marka oraz model:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="75.0" text="Rok wyprodukowania:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="95.0" text="Silnik:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="115.0" text="Typ paliwa:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="135.0" text="Numer rejestracyjny:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="155.0" text="Kolor:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="175.0" text="Uszkodzenia/uwagi:" textFill="#45b74b" AnchorPane.leftAnchor="18.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyUszkodzenia" alignment="TOP_LEFT" layoutX="18.0" layoutY="193.0" prefHeight="102.0" prefWidth="361.0" text="Brak uwag albo uszkodzeń" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Light Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyMarkaModel" alignment="CENTER" contentDisplay="CENTER" layoutX="156.0" layoutY="54.0" prefHeight="18.0" prefWidth="132.0" text="Volkswagen Golf GTI" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyRokWyprodukowania" alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="75.0" prefHeight="18.0" prefWidth="128.0" text="2018" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolySilnik" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="95.0" prefHeight="18.0" prefWidth="127.0" text="2.0 TDI" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyTypPaliwa" alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="115.0" prefHeight="18.0" prefWidth="127.0" text="Diesel" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyNumerRejestracyjny" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="135.0" prefHeight="18.0" prefWidth="127.0" text="RZ3560N" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyKolor" alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="154.0" prefHeight="18.0" prefWidth="127.0" text="Niebieski" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="321.0" text="Wartość za dobę:" textFill="#45b74b" AnchorPane.leftAnchor="18.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyCenaZaDobe" alignment="TOP_LEFT" layoutX="158.0" layoutY="321.0" prefHeight="18.0" prefWidth="38.0" text="260" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="191.0" layoutY="321.0" text="zł" textFill="#45b74b">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="395.0" text="Imie:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="415.0" text="Nazwisko:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="362.0" prefHeight="22.0" prefWidth="389.0" text="Dane klienta" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Segoe UI Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyImieKlienta" alignment="CENTER" layoutX="162.0" layoutY="394.0" prefHeight="18.0" prefWidth="106.0" text="Władysław" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyNazwiskoKlienta" alignment="CENTER" layoutX="172.0" layoutY="414.0" prefHeight="18.0" prefWidth="86.0" text="Matusz" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="435.0" text="Telefon:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyTelefonKlienta" alignment="CENTER" layoutX="162.0" layoutY="434.0" prefHeight="18.0" prefWidth="106.0" text="734 168 543" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="455.0" text="Email:" textFill="#45b74b" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyEmailKlienta" alignment="CENTER" layoutX="148.0" layoutY="454.0" prefHeight="18.0" prefWidth="134.0" text="wmatusz@gmail.com" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Line endX="390.3999938964844" endY="3.0517578125E-5" layoutX="-23.0" layoutY="354.0" startX="43.29288101196289" startY="3.0517578125E-5" stroke="WHITE" AnchorPane.leftAnchor="19.79288101196289" />
+            <Label layoutX="20.0" layoutY="475.0" text="Data wypożyczenia:" textFill="#45b74b">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyDataWypozyczenia" alignment="CENTER" layoutX="148.0" layoutY="475.0" prefHeight="18.0" prefWidth="134.0" text="12-05-2020" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="500.0" text="Data zwrotu:" textFill="#45b74b">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="protokolyDataZwrotu" alignment="CENTER" layoutX="96.0" layoutY="499.0" prefHeight="18.0" prefWidth="238.0" text="Zamówienie nie zaakceptowane" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="513.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <Line endX="368.60003662109375" endY="3.0517578125E-5" layoutX="128.0" layoutY="361.0" startX="-100.0" stroke="WHITE" />
+            <Line endX="368.60003662109375" endY="3.0517578125E-5" layoutX="128.0" layoutY="14.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="28.0" layoutY="468.0" text="Typ protokołu:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="239.0" layoutY="464.0" mnemonicParsing="false" onAction="#wygenerujProtokol" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #59E739;" text="Wygeneruj protokół" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="399.0" layoutY="503.0" mnemonicParsing="false" onAction="#wracamyDoWypozyczen" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: red;" text="Wróć" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="protokolyZdjecieCar" fitHeight="327.0" fitWidth="470.0" layoutX="27.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="183.0" layoutY="371.0" mnemonicParsing="false" onAction="#changeStatus" style="-fx-background-color: orange;" text="Zmień" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font></Button>
+            <ChoiceBox fx:id="changeStatusBox" layoutX="24.0" layoutY="371.0" prefWidth="150.0" style="-fx-background-color: #59E739;">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+               </FXCollections>
+            </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="TypProtokolu" layoutX="133.0" layoutY="464.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: orange;" />
+            <Button layoutX="319.0" layoutY="370.0" mnemonicParsing="false" onAction="#AddPhotoDamage" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: orange;" text="Aktualizuj uszkodzenia" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Button>
+            <Line endX="369.3999938964844" layoutX="128.0" layoutY="451.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="28.0" layoutY="430.0" prefHeight="18.0" prefWidth="173.0" text="Generowanie protokołów" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

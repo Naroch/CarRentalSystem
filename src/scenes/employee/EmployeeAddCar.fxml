@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.employee.EmployeeAddCarController">
+  <center>
+    <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+      <children>
+        <BorderPane layoutX="0.0" layoutY="-3.0" prefHeight="700.0" prefWidth="900.0">
+          <bottom>
+            <Pane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: grey;">
+              <children>
+                <Pane layoutX="26.0" layoutY="89.0" prefHeight="507.0000999999975" prefWidth="412.0">
+                  <children>
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="MARKA:" textAlignment="CENTER" />
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="102.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="ROK PRODUKCJI:" textAlignment="CENTER" />
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="203.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="SILNIK:" textAlignment="CENTER" />
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="305.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="MOC:" textAlignment="CENTER" />
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="405.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="PALIWO:" textAlignment="CENTER" />
+                    <TextField id="marka1" fx:id="model" layoutX="0.0" layoutY="51.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                    <TextField id="silnik1" fx:id="production_date" layoutX="0.0" layoutY="152.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                    <TextField id="rok1" fx:id="engine" layoutX="0.0" layoutY="254.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                    <TextField id="kolor1" fx:id="power" layoutX="-1.0" layoutY="354.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                    <TextField id="cena1" fx:id="fuel" layoutX="0.0" layoutY="456.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                  </children>
+                </Pane>
+                <Button layoutX="37.0" layoutY="24.0" mnemonicParsing="false" onAction="#EmployeeCofnijButton" style="-fx-background-color: #ff0000;" text="Cofnij" textFill="WHITE">
+                  <font>
+                    <Font name="Segoe UI Black" size="14.0" fx:id="x2" />
+                  </font>
+                </Button>
+                <Pane layoutX="464.0" layoutY="89.0" prefHeight="211.0" prefWidth="413.0">
+                  <children>
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="SKRZYNIA:" textAlignment="CENTER" />
+                    <TextField id="moc1" fx:id="transmission" layoutX="0.0" layoutY="51.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="102.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="COLOR:" textAlignment="CENTER" />
+                    <TextField id="skrzynia1" fx:id="color" layoutX="0.0" layoutY="153.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                  </children>
+                </Pane>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="464.0" layoutY="393.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="NR REJESTRACYJNY:" textAlignment="CENTER" />
+                <TextField id="status" fx:id="registration_number" layoutX="464.0" layoutY="442.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="464.0" layoutY="292.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="KOSZT:" textAlignment="CENTER" />
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="464.0" layoutY="493.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: A4CF2E;" text="AGENCJA:" textAlignment="CENTER" />
+                <TextField id="skrzynia1" fx:id="cost" layoutX="464.0" layoutY="342.0" prefHeight="51.0" prefWidth="413.0" style="-fx-background-color: C3942F;" />
+                <Button layoutX="319.0" layoutY="616.0" mnemonicParsing="false" onAction="#EmployeeAddCarButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="DODAJ" textFill="WHITE">
+                  <font>
+                    <Font name="Segoe UI Black" size="17.0" fx:id="x1" />
+                  </font>
+                </Button>
+                <ComboBox fx:id="filiaComboBox" layoutX="464.0" layoutY="544.0" prefHeight="51.0" prefWidth="413.0" promptText=" " style="-fx-background-color: C3942F;" />
+              </children>
+            </Pane>
+          </bottom>
+        </BorderPane>
+      </children>
+    </AnchorPane>
+  </center>
+  <left>
+    <AnchorPane prefHeight="700.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+      <children>
+        <ImageView fitHeight="700.0" fitWidth="302.0">
+          <image>
+            <Image url="@../../images/1586707351_51-p-chernie-foni-s-grafikoi-116.jpg" />
+          </image>
+        </ImageView>
+        <Button font="$x1" layoutX="12.0" layoutY="334.0" mnemonicParsing="false" onAction="#EmloyeeKatalogPojazdowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: A4CF2E;" text="Katalog pojazdów" textFill="WHITE" />
+        <Line endX="135.0" layoutX="146.0" layoutY="296.0" startX="-129.00001525878906" stroke="#af9f36" strokeWidth="3.0" />
+        <Button font="$x1" layoutX="12.0" layoutY="395.0" mnemonicParsing="false" onAction="#EmloyeeRaportyButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Raporty" textFill="WHITE" />
+        <Button font="$x1" layoutX="12.0" layoutY="457.0" mnemonicParsing="false" onAction="#EmloyeeWypozyczeniaKlientowButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Wypożyczenia klientów" textFill="WHITE" />
+        <Button font="$x1" layoutX="11.0" layoutY="576.0" mnemonicParsing="false" onAction="#EmloyeeUstawieniaButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Ustawienia" textFill="WHITE" />
+        <Button font="$x2" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#EmployeeLogoutButton" style="-fx-background-color: red;" text="Wyloguj" textFill="WHITE" />
+        <ImageView fitHeight="173.0" fitWidth="179.0" layoutX="62.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../images/kissclipart-customer-service-manager-icon-clipart-customer-ser-0fd8b371b6a15740.png" />
+          </image>
+        </ImageView>
+        <Label fx:id="name" alignment="CENTER" layoutX="16.0" layoutY="250.0" prefHeight="35.0" prefWidth="134.0" textFill="WHITE">
+          <font>
+            <Font name="Segoe UI Historic" size="24.0" />
+          </font>
+        </Label>
+        <Label fx:id="lastName" alignment="CENTER" layoutX="155.0" layoutY="250.0" prefHeight="35.0" prefWidth="134.0" textFill="WHITE">
+          <font>
+            <Font name="Segoe UI Historic" size="24.0" />
+          </font>
+        </Label>
+        <Button font="$x1" layoutX="13.0" layoutY="517.0" mnemonicParsing="false" onAction="#EmployeeUzytkownicyButton" prefHeight="51.0" prefWidth="277.0" style="-fx-background-color: C3942F;" text="Użytkownicy" textFill="WHITE" />
+      </children>
+    </AnchorPane>
+  </left>
+</BorderPane>

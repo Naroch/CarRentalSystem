@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.client.ClientDamagesController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="450.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/17_3140_oboi_temno-seryj_fon_1920x1080.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ClientPhotoCarDamage" fitHeight="324.0" fitWidth="451.0" layoutX="12.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+            <Line endX="345.0" endY="1.1444091796875E-5" layoutX="115.0" layoutY="62.0" startX="-100.0" stroke="WHITE" />
+            <Line endX="345.0" endY="1.1444091796875E-5" layoutX="117.0" layoutY="411.0" startX="-100.0" stroke="WHITE" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="8.0" prefHeight="36.0" prefWidth="239.0" text="Uszkodzenia auta" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Emoji" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="ClientCarDetailDamageLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="476.0" layoutY="68.0" prefHeight="334.0" prefWidth="303.0" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="645.0" layoutY="14.0" mnemonicParsing="false" onAction="#cofnijButton" prefHeight="30.0" prefWidth="128.0" style="-fx-background-color: red;" text="Wróć" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

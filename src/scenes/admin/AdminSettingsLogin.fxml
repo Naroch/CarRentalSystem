@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="296.0" prefWidth="463.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AdminSettingsLoginController">
+   <children>
+      <TextField fx:id="loginTextField" layoutX="158.0" layoutY="49.0" />
+      <PasswordField fx:id="passwordField" layoutX="157.0" layoutY="100.0" />
+      <Button layoutX="160.0" layoutY="144.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #35EC1E;" text="Zapisz" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Button>
+      <Label layoutX="178.0" layoutY="31.0" text="Wpisz nowy login" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Label>
+      <Label layoutX="196.0" layoutY="82.0" text="Wpisz hasło" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Label>
+      <Label layoutX="218.0" layoutY="148.0" />
+   </children>
+</AnchorPane>
